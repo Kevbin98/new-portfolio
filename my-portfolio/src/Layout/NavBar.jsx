@@ -127,18 +127,19 @@ const dropdown = {
   position: "absolute",
   top: "80px",
   right: "5px",
-  backgroundColor: "rgba(22, 22, 23, 0.9)",
+  backgroundColor: "white",
   boxShadow: "0 4px 12px rgba(0,0,0,0.3)",
   borderRadius: "8px",
   padding: "10px",
   minWidth: "150px",
   maxWidth: "200px",
   textAlign: "center",
+
   zIndex: 10000,
 };
 
 const dropdownItem = {
-  color: "#fff",
+  color: "black",
   padding: "8px 12px",
   textDecoration: "none",
   display: "block",
