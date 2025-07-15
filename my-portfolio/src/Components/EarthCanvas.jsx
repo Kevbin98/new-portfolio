@@ -43,7 +43,7 @@ const EarthCanvas = () => {
     scene.add(earthMesh);
 
     const cloudMaterial = new THREE.MeshLambertMaterial({
-      map: textureLoader.load("/textures/earthcloudmap.jpg"),
+      //map: textureLoader.load("/textures/earthcloudmap.jpg"),
       alphaMap: textureLoader.load("/textures/earthcloudmaptrans.jpg"),
       transparent: true,
       opacity: 0.8,

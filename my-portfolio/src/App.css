@@ -43,13 +43,14 @@
 }
 
 .hover-glow {
-  transition: background-color 0.3s ease;
+  transition: box-shadow 0.3s ease;
   padding: 5px;
   border-radius: 10px;
 }
 
 .hover-glow:hover {
   box-shadow: 0 0 10px white;
+  cursor: pointer;
 }
 
 .dropdown-container {
