@@ -3,7 +3,7 @@ import styled from "styled-components";
 import ProjectsWallpaper from "../assets/milks.jpg";
 import ProjectCard from "../Components/ProjectCard";
 import audiWav from "../assets/audiwavEditor.png";
-import ToneHQ from "../assets/tonehq.png";
+import ToneHQ from "../assets/toneHQ.png";
 
 const Projects = () => {
   useEffect(() => {
