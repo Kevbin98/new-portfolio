@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styled from "styled-components";
 import AboutWallpaper from "../assets/Pillars.jpg";
 
@@ -12,94 +12,99 @@ const TABS = [
 const About = () => {
   const [activeTab, setActiveTab] = useState("About");
 
+  useEffect(() => {
+    document.title = "About | Kevin Barany Portfolio";
+  }, []);
+
   return (
-    <Container>
-      <Header className='hover-glow'>About</Header>
-      <Wallpaper />
+    <>
+      <Container>
+        <Wallpaper />
 
-      <TabWrapper>
-        <TabsContainer>
-          {TABS.map(({ name }) => (
-            <StyledTabButton
-              key={name}
-              onClick={() => setActiveTab(name)}
-              $active={activeTab === name}
-            >
-              {name}
-            </StyledTabButton>
-          ))}
-        </TabsContainer>
+        <TabWrapper>
+          <TabsContainer>
+            {TABS.map(({ name }) => (
+              <StyledTabButton
+                key={name}
+                onClick={() => setActiveTab(name)}
+                $active={activeTab === name}
+              >
+                {name}
+              </StyledTabButton>
+            ))}
+          </TabsContainer>
 
-        <TabContent>
-          <FadeIn>
-            {activeTab === "About" && (
-              <>
-                <h2>Who I Am</h2>
-                <p>
-                  I'm a full-stack developer with a deep passion for music and a
-                  lifelong curiosity for science and space. As a guitarist and
-                  music enthusiast, I’ve always been drawn to creative
-                  expression — and I found that same sense of challenge and
-                  creativity in coding. What started as a fascination with
-                  technology quickly turned into a genuine love for programming.
-                  I specialize in HTML, CSS, JavaScript, React, Node, and
-                  Express and I’m constantly expanding my skill set as I grow as
-                  a developer. I’m excited to keep learning, building, and
-                  pushing the boundaries of what I can create — both in code and
-                  in music.
-                </p>
-              </>
-            )}
+          <TabContent>
+            <FadeIn>
+              {activeTab === "About" && (
+                <>
+                  <h2>Who I Am</h2>
+                  <p>
+                    I'm a full-stack developer with a deep passion for music and
+                    a lifelong curiosity for science and space. As a guitarist
+                    and music enthusiast, I’ve always been drawn to creative
+                    expression — and I found that same sense of challenge and
+                    creativity in coding. What started as a fascination with
+                    technology quickly turned into a genuine love for
+                    programming. I specialize in HTML, CSS, JavaScript, React,
+                    Node, and Express and I’m constantly expanding my skill set
+                    as I grow as a developer. I’m excited to keep learning,
+                    building, and pushing the boundaries of what I can create —
+                    both in code and in music.
+                  </p>
+                </>
+              )}
 
-            {activeTab === "Education" && (
-              <>
-                <h2>Education</h2>
-                <ul>
-                  <li>
-                    Full-Stack Web Development Diploma – Concordia University
-                    (2025)
-                  </li>
-                  <li>Python Bootcamp – Udemy (Ongoing)</li>
-                  <li>
-                    Diploma of Vocational Studies (DVS) - Accounting – West
-                    Island Career Centre (WICC) (2020)
-                  </li>
-                </ul>
-              </>
-            )}
+              {activeTab === "Education" && (
+                <>
+                  <h2>Education</h2>
+                  <ul>
+                    <li>
+                      Full-Stack Web Development Diploma – Concordia University
+                      (2025)
+                    </li>
+                    <li>Python Bootcamp – Udemy by Jose Portilla (Ongoing)</li>
+                    <li>
+                      Diploma of Vocational Studies (DVS) - Accounting – West
+                      Island Career Centre (WICC) (2020)
+                    </li>
+                  </ul>
+                </>
+              )}
 
-            {activeTab === "Experience" && (
-              <>
-                <h2>Experience</h2>
-                <ul>
-                  <li>Creator & Developer of Audiwav (2025 - present)</li>
-                  <li>
-                    Crew Leader – Ottinger Landscaping (06/2020 – 06/2025)
-                  </li>
-                  <li>
-                    Accounts Payable Clerk – Safran Cabin (05/2022 – 10/2022)
-                  </li>
-                  <li>Cast Member – Cineplex Kirkland (12/2014 – 06/2020)</li>
-                </ul>
-              </>
-            )}
+              {activeTab === "Experience" && (
+                <>
+                  <h2>Experience</h2>
+                  <ul>
+                    <li>Creator & Developer of Audiwav (2025 - present)</li>
+                    <li>
+                      Crew Leader – Ottinger Landscaping (06/2020 – 06/2025)
+                    </li>
+                    <li>
+                      Accounts Payable Clerk – Safran Cabin (05/2022 – 10/2022)
+                    </li>
+                    <li>Cast Member – Cineplex Kirkland (12/2014 – 06/2020)</li>
+                  </ul>
+                </>
+              )}
 
-            {activeTab === "Skills" && (
-              <>
-                <h2>Skills</h2>
-                <ul>
-                  <li>JavaScript / React / Node.js / Express</li>
-                  <li>Firebase / MongoDB / REST APIs</li>
-                  <li>Three.js / PixiJS / Web Audio API</li>
-                  <li>Git / Responsive Design / UX</li>
-                  <li>Python (Currently Learning)</li>
-                </ul>
-              </>
-            )}
-          </FadeIn>
-        </TabContent>
-      </TabWrapper>
-    </Container>
+              {activeTab === "Skills" && (
+                <>
+                  <h2>Skills</h2>
+                  <ul>
+                    <li>JavaScript / React / Node.js / Express</li>
+                    <li>Firebase / MongoDB / REST APIs</li>
+                    <li>Three.js / PixiJS / Web Audio API</li>
+                    <li>Git / Responsive Design / UX</li>
+                    <li>Python (Currently Learning)</li>
+                  </ul>
+                </>
+              )}
+            </FadeIn>
+          </TabContent>
+        </TabWrapper>
+      </Container>
+    </>
   );
 };
 

@@ -1,4 +1,4 @@
-import React from "react";
+import { useEffect } from "react";
 import styled from "styled-components";
 import ProjectsWallpaper from "../assets/milks.jpg";
 import ProjectCard from "../Components/ProjectCard";
@@ -6,38 +6,45 @@ import audiWav from "../assets/audiwavEditor.png";
 import ToneHQ from "../assets/tonehq.png";
 
 const Projects = () => {
+  useEffect(() => {
+    document.title = "Projects | Kevin Barany Portfolio";
+  }, []);
   return (
-    <Container>
-      <Header className='hover-glow'>Projects</Header>
-      <Wallpaper />
-      <Grid>
-        <a
-          href='https://github.com/Kevbin98/AudiWav-audio-visualizer-app'
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          <ProjectCard
-            image={audiWav}
-            alt='AudiWav'
-            title='AudiWav'
-            tech='React.js, JavaScript, Web Audio API, PixiJS'
-          />
-        </a>
-        <a
-          href='https://github.com/Kevbin98/ToneHq.app'
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          <ProjectCard
-            image={ToneHQ}
-            alt='ToneHQ'
-            title='ToneHQ'
-            tech='React.js, JavaScript, YouTube Data API v3, Three.js'
-          />
-        </a>
-        {/* You can add more ProjectCards here */}
-      </Grid>
-    </Container>
+    <>
+      <Container>
+        <Header className='hover-glow'>Projects</Header>
+        <Wallpaper />
+        <Grid>
+          <a
+            href='https://github.com/Kevbin98/AudiWav-audio-visualizer-app'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            <ProjectCard
+              image={audiWav}
+              alt='AudiWav'
+              title='AudiWav'
+              tech='React.js, JavaScript, Web Audio API, PixiJS'
+              description='An audio visualizer app that allows users to upload audio files and visualize them in real-time using Web Audio API and PixiJS.'
+            />
+          </a>
+          <a
+            href='https://github.com/Kevbin98/ToneHq.app'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            <ProjectCard
+              image={ToneHQ}
+              alt='ToneHQ'
+              title='ToneHQ'
+              tech='React.js, JavaScript, YouTube Data API v3, Three.js'
+              description='A music discovery app that allows users to search for music videos and view them in a 3D environment using Three.js.'
+            />
+          </a>
+          {/* You can add more ProjectCards here */}
+        </Grid>
+      </Container>
+    </>
   );
 };
 

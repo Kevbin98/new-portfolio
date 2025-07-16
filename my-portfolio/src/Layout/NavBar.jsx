@@ -88,6 +88,15 @@ const MyNavbar = () => {
         >
           About
         </Nav.Link>
+        <Nav.Link
+          as={NavLink}
+          to='/contact'
+          style={dropdownItem}
+          onClick={handleNavClick}
+          className='hover-darken'
+        >
+          Contact
+        </Nav.Link>
       </div>
     </>
   );

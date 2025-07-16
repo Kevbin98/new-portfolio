@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import EarthCanvas from "../Components/EarthCanvas.jsx";
 import { IoIosArrowBack } from "react-icons/io";
 import styled from "styled-components";
@@ -10,57 +10,63 @@ import Diploma from "../assets/diploma.png";
 const Home = () => {
   const [tabs, setTabs] = useState(true);
 
+  useEffect(() => {
+    document.title = "Home | Kevin Barany Portfolio";
+  }, []);
+
   return (
-    <Container>
-      <EarthCanvas />
+    <>
+      <Container>
+        <EarthCanvas />
 
-      {/* Toggle Button */}
-      <ToggleButton
-        className='hover-glow'
-        onClick={() => setTabs(!tabs)}
-        open={tabs}
-      >
-        <IoIosArrowBack />
-      </ToggleButton>
-
-      {/* Info Panel */}
-      <InfoPanel className='hover-glow' open={tabs}>
-        <div style={{ textAlign: "center" }}>
-          <h1>Welcome to my portfolio</h1>
-          <p>
-            Hi, my name is Kevin Barany. I'm a passionate full-stack developer
-            from Montreal, Canada 🍁 with a love for building beautiful,
-            performant, and user-focused web applications. Whether it’s bringing
-            designs to life or solving tough backend challenges, I’m always
-            excited to turn ideas into reality.
-          </p>
-        </div>
-        <div
-          style={{
-            fontSize: "3rem",
-            display: "flex",
-            justifyContent: "center",
-            gap: "1rem",
-            marginTop: "1rem",
-          }}
+        {/* Toggle Button */}
+        <ToggleButton
+          className='hover-glow'
+          onClick={() => setTabs(!tabs)}
+          open={tabs}
         >
-          <SiHtml5 className='hover-darken' />
-          <SiCss3 className='hover-darken' />
-          <SiJavascript className='hover-darken' />
-          <SiMongodb className='hover-darken' />
-          <FaReact className='hover-darken' />
-          <FaNode className='hover-darken' />
-        </div>
-        <div>
-          <img
-            src={Diploma}
-            alt='Diploma'
-            className='hover-darken'
-            style={{ width: "100%", marginTop: "1rem", borderRadius: "8px" }}
-          />
-        </div>
-      </InfoPanel>
-    </Container>
+          <IoIosArrowBack />
+        </ToggleButton>
+
+        {/* Info Panel */}
+        <InfoPanel className='hover-glow' open={tabs}>
+          <div style={{ textAlign: "center" }}>
+            <h1>Welcome to my portfolio</h1>
+            <p>
+              Hi, my name is Kevin Barany. I'm a passionate full-stack developer
+              from Montreal, Canada 🍁 with a love for building beautiful,
+              performant, and user-focused web applications. Whether it’s
+              bringing designs to life or solving tough backend challenges, I’m
+              always excited to turn ideas into reality.
+            </p>
+          </div>
+          <div
+            style={{
+              fontSize: "3rem",
+              display: "flex",
+              justifyContent: "center",
+              gap: "1rem",
+              marginTop: "1rem",
+            }}
+          >
+            <SiHtml5 className='hover-darken' />
+            <SiCss3 className='hover-darken' />
+            <SiJavascript className='hover-darken' />
+            <SiMongodb className='hover-darken' />
+            <FaReact className='hover-darken' />
+            <FaNode className='hover-darken' />
+          </div>
+          <div>
+            <img
+              src={Diploma}
+              alt='Diploma'
+              className='hover-darken'
+              style={{ width: "100%", marginTop: "1rem", borderRadius: "8px" }}
+            />
+          </div>
+        </InfoPanel>
+      </Container>
+    </>
   );
 };
 
