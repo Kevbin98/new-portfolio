@@ -37,7 +37,9 @@ const MyNavbar = () => {
             style={logoText}
             className='hover-darken'
           >
-            <p style={{ marginBottom: 0, fontWeight: "bold" }}>Kev-Dev</p>
+            <p style={{ marginBottom: 0, fontWeight: "bold" }}>
+              Kevin Barany Portolio
+            </p>
           </Nav.Link>
 
           {/* Right side */}
