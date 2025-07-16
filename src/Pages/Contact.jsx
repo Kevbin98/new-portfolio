@@ -29,7 +29,11 @@ const About = () => {
                 alt='email icon'
               />
             </a>
-            <a href='https://www.linkedin.com/in/kevin-barany-4a9b18195/'>
+            <a
+              href='https://www.linkedin.com/in/kevin-barany-4a9b18195/'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
               <CiLinkedin
                 className='hover-darken'
                 style={{ fontSize: "50px" }}
