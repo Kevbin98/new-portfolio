@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import styled from "styled-components";
 import ContactWallpaper from "../assets/cluster.jpg";
-import { CiMail } from "react-icons/ci";
-import { CiLinkedin } from "react-icons/ci";
+import { CiMail, CiLinkedin } from "react-icons/ci";
+import { FaGithubSquare } from "react-icons/fa";
 
 const About = () => {
   useEffect(() => {
@@ -38,6 +38,17 @@ const About = () => {
                 className='hover-darken'
                 style={{ fontSize: "50px" }}
                 alt='linkdin icon'
+              />
+            </a>
+            <a
+              href='https://github.com/Kevbin98'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              <FaGithubSquare
+                className='hover-darken'
+                style={{ fontSize: "45px" }}
+                alt='github icon'
               />
             </a>
           </FadeIn>
