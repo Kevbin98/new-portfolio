@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import styled from "styled-components";
 import ContactWallpaper from "../assets/cluster.jpg";
-import { CiMail, CiLinkedin } from "react-icons/ci";
+import { CiMail } from "react-icons/ci";
+import { CiLinkedin } from "react-icons/ci";
 import { FaGithubSquare } from "react-icons/fa";
 
 const About = () => {
