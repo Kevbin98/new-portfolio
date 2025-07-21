@@ -38,7 +38,7 @@ const MyNavbar = () => {
             className='hover-darken'
           >
             <p style={{ marginBottom: 0, fontWeight: "bold" }}>
-              Kevin Barany Portolio
+              Kevin Barany Portfolio
             </p>
           </Nav.Link>
 
