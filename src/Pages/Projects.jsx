@@ -4,6 +4,7 @@ import ProjectsWallpaper from "../assets/milks.jpg";
 import ProjectCard from "../Components/ProjectCard";
 import audiWav from "../assets/audiwavEditor.png";
 import ToneHQ from "../assets/toneHQ.png";
+import WaterVisualizer from "../assets/WaterVisualizer.png";
 
 const Projects = () => {
   useEffect(() => {
@@ -39,6 +40,19 @@ const Projects = () => {
               title='ToneHQ'
               tech='React.js, JavaScript, YouTube Data API v3, Three.js'
               description='A music discovery app that allows users to search for music videos and view them in a 3D environment using Three.js.'
+            />
+          </a>
+          <a
+            href='https://wateraudiovisualizer.netlify.app/'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            <ProjectCard
+              image={WaterVisualizer}
+              alt='Water Visualizer'
+              title='Three.js Audio Visualizer'
+              tech='Javascript, Three.js, Web Audio API'
+              description='A web-based audio visualizer that transforms your music in real time. Users can upload their own songs to generate dynamic frequency visualizations set within a calming aquatic scene.'
             />
           </a>
           {/* You can add more ProjectCards here */}
